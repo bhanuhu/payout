@@ -13,18 +13,22 @@ import SearchIcon from '@mui/icons-material/Search';
 import AccountCircle from '@mui/icons-material/AccountCircle';
 import MailIcon from '@mui/icons-material/Mail';
 import NotificationsIcon from '@mui/icons-material/Notifications';
+import ArrowDropDownOutlinedIcon from '@mui/icons-material/ArrowDropDownOutlined';
+import HelpOutlineOutlinedIcon from '@mui/icons-material/HelpOutlineOutlined';
+
+
 
 const Search = styled('div')(({ theme }) => ({
 
   position: 'relative',
   borderRadius:5,
-  backgroundColor: 'white',
+  backgroundColor: '#F2F2F2',
   '&:hover': {
     backgroundColor: alpha(theme.palette.common.white, (242,242,242)),
   },
   marginRight: theme.spacing(2),
   marginLeft: 0,
-  width: '110%',
+  width: '100%',
   [theme.breakpoints.up('sm')]: {
     marginLeft: theme.spacing(25),
     width: 'auto',
@@ -50,9 +54,9 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
     // vertical padding + font size from searchIcon
     paddingLeft: `calc(1em + ${theme.spacing(4)})`,
     transition: theme.transitions.create('width'),
-    width: '150%',
+    width: '100%',
     [theme.breakpoints.up('md')]: {
-      width: '45ch',
+      width: '30ch',
     },
   },
 }));
@@ -154,21 +158,23 @@ export default function PrimarySearchAppBar() {
 
   return (
     <Box sx={{ flexGrow: 1 ,backgroundColor:'white',color:'black'}}>
-      <AppBar position="static">
+      <AppBar position="static" sx={{backgroundColor:'white'}}>
         <Toolbar>
           
           <Typography
-            variant="h6"
+            variant="h4"
             noWrap
             component="div"
-            sx={{ display: { xs: 'none', sm: 'block' },ml:30 }}
+            sx={{ display: { xs: 'none', sm: 'block' },ml:30,color:'black' }}
           >
            Payouts
           </Typography>
+          < HelpOutlineOutlinedIcon sx={{color:'#4C4C4C',ml:5,mt:.5,mr:1}}/>
           <Typography variant="text"
           noWrap
           component="div"
-          sx={{ display: { xs: 'none', sm: 'block',mr:-2 } }}>How it works</Typography>
+          
+          sx={{ color:'black' }}>How it works</Typography>
           <Search sx={{backgroundColor:(242,242,242)}}>
             <SearchIconWrapper>
               <SearchIcon />
@@ -182,7 +188,7 @@ export default function PrimarySearchAppBar() {
           <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
             <IconButton size="large" aria-label="show 4 new mails" color="inherit">
               <Badge badgeContent={4} color="error">
-                <MailIcon />
+                <MailIcon sx={{color:'#4C4C4C',backgroundColor:'#E6E6E6',borderRadius:5}} />
               </Badge>
             </IconButton>
             <IconButton
@@ -191,7 +197,9 @@ export default function PrimarySearchAppBar() {
               color="inherit"
             >
               <Badge badgeContent={17} color="error">
-                <NotificationsIcon />
+                            <ArrowDropDownOutlinedIcon sx={{color:'#4C4C4C',backgroundColor:'#E6E6E6',borderRadius:5}}/> 
+             
+
               </Badge>
             </IconButton>
             
