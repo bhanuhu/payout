@@ -6,7 +6,7 @@ import Main from './Main';
 function App() {
   return (
     <Box>
-    <Drawer sx={{position:'static'}}/>
+    <Drawer sx={{position:'static '}}/>
     <Appbar/>
     <Main/>
     </Box>
