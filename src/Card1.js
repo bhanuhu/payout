@@ -20,31 +20,31 @@ const bull = (
 );
 
 export default function BasicCard() {
-  return (
-    <Card sx={{ minWidth: 275 ,ml:35}}>
-      <CardContent sx={{    backgroundColor:'#146EB4'}}>
+  return (<Box sx={{ minWidth:'25%' ,ml:35}}>
+    <Card >
+      <CardContent sx={{    backgroundColor:'#146EB4',mb:'-4% '}}>
       <Stack direction='row'>
-        <Typography sx={{ fontSize: 14 ,color:'white'}} color="text.secondary" gutterBottom>
-          Next Payout
+        <Typography sx={{ fontSize: 14 ,color:'white'}} color="text.secondary" variant='h2' gutterBottom>
+          Next Payment
         </Typography>
-        < HelpOutlineOutlinedIcon sx={{color:'white',ml:1,mt:.3,mr:1,height:16}}/>
+        < HelpOutlineOutlinedIcon sx={{color:'white',ml:'1%',height:16}}/>
         </Stack>
         <Stack direction= 'row'>
-        <Typography sx={{color:'white'}}>&#8377; 2,312.23</Typography>
+        <Typography sx={{color:'white'}} variant='h4'>&#8377; 2,312.23</Typography>
         
-        <Link href="#" variant="body2" sx={{ml:5 ,color:'white'}}>
+        <Link href="#" variant="body2" sx={{ml:'20%' ,color:'white',mt:'2%'}}>
             {'23 Orders '}>
         </Link>
         </Stack>
         </CardContent>
-        <CardContent sx={{    backgroundColor:'#0E4F82'}}>
-        <Stack direction= 'row'>
-        <Typography sx={{color:'white'}}>Next Payment Date</Typography>
-        <Typography sx={{color:'white'}}>Today, 04:00PM</Typography>
+        <CardContent sx={{    backgroundColor:'#0E4F82',mt:'4%'}}>
+        <Stack direction= 'row' sx={{    backgroundColor:'#0E4F82',mb:'-3%',mt:'-2%'  ,pb:'0%'}}>
+        <Typography sx={{color:'white'}} variant='caption'>Next Payout Date</Typography>
+        <Typography sx={{color:'white',ml:'42%'}} variant='caption'>Today, 04:00PM</Typography>
                 
         
         </Stack>
         </CardContent>
-    </Card>
+    </Card></Box>
   );
 }

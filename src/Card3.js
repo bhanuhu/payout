@@ -21,7 +21,7 @@ const bull = (
 
 export default function BasicCard() {
   return (
-    <Card sx={{ minWidth: 275 ,ml:30,Height:25,mt:2,mb:5,ml:5 }}>
+    <Card sx={{ minWidth:'25%' ,ml:30,Height:25,mt:2,mb:5,ml:5 }}>
       <CardContent sx={{    backgroundColor:'white'}}>
       <Stack direction='row'>
       <Typography sx={{ fontSize: 14 ,color:'#4C4C4C'}} color="text.secondary" gutterBottom>
