@@ -11,10 +11,12 @@ import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
 import AccountCircle from '@mui/icons-material/AccountCircle';
-import MailIcon from '@mui/icons-material/Mail';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import ArrowDropDownOutlinedIcon from '@mui/icons-material/ArrowDropDownOutlined';
 import HelpOutlineOutlinedIcon from '@mui/icons-material/HelpOutlineOutlined';
+import logo from './images/abc.png';
+import { SvgIcon } from '@mui/material';
+import TextsmsIcon from '@mui/icons-material/Textsms';
 
 
 
@@ -30,7 +32,7 @@ const Search = styled('div')(({ theme }) => ({
   marginLeft: 0,
   width: '100%',
   [theme.breakpoints.up('sm')]: {
-    marginLeft: theme.spacing(25),
+    marginLeft: theme.spacing(9),
     width: 'auto',
   },
 }));
@@ -123,9 +125,7 @@ export default function PrimarySearchAppBar() {
     >
       <MenuItem>
         <IconButton size="large" aria-label="show 4 new mails" color="white">
-          <Badge badgeContent={4} color="error">
-           
-          </Badge>
+          
         </IconButton>
         <p>Messages</p>
       </MenuItem>
@@ -186,10 +186,9 @@ export default function PrimarySearchAppBar() {
           </Search>
           <Box sx={{ flexGrow: 1 }} />
           <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
-            <IconButton size="large" aria-label="show 4 new mails" color="inherit">
-              <Badge badgeContent={4} color="error">
-                <MailIcon sx={{color:'#4C4C4C',backgroundColor:'#E6E6E6',borderRadius:5}} />
-              </Badge>
+          
+            <IconButton  >
+            <TextsmsIcon sx={{color:'#4C4C4C',backgroundColor:'#E6E6E6',borderRadius:3 ,fontSize:'120%',mr:'2%'}}/>
             </IconButton>
             <IconButton
               size="large"
@@ -197,7 +196,7 @@ export default function PrimarySearchAppBar() {
               color="inherit"
             >
               <Badge badgeContent={17} color="error">
-                            <ArrowDropDownOutlinedIcon sx={{color:'#4C4C4C',backgroundColor:'#E6E6E6',borderRadius:5}}/> 
+                <ArrowDropDownOutlinedIcon sx={{color:'#4C4C4C',backgroundColor:'#E6E6E6',borderRadius:5 ,fontSize:'110%'}}/> 
              
 
               </Badge>

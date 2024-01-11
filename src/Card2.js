@@ -30,7 +30,7 @@ export default function BasicCard() {
         < HelpOutlineOutlinedIcon sx={{color:'#4C4C4C',ml:1,mt:.3,mr:1,height:16}}/>
         </Stack>
         <Stack direction= 'row'>
-        <Typography>Rs 92,312.20</Typography>
+        <Typography>&#8377; 92,312.20</Typography>
         
         <Link href="#" variant="body2" sx={{ml:5 }}>
             {'13 Orders '}>
